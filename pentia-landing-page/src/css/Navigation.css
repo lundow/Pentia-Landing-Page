@@ -1,0 +1,51 @@
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #1b1b1d;
+  height: 100vh;
+  width: 180px;
+  position: fixed;
+  outline: none;
+  z-index: 1;
+  transform: translateX(-66%);
+}
+
+.sidebar-close {
+  transform: translateX(0%);
+  animation: slide-close 0.5s forwards;
+}
+
+.sidebar-open {
+    transform: translateX(-66%);
+    animation: slide-open 0.5s forwards;
+}
+
+.toggle-field {
+  display: flex;
+  flex-direction: column;
+  grid-column: 3;
+}
+
+.hamburger-button {
+  outline: none !important;
+  outline-offset: none !important;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  background-color: #1b1b1d;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@keyframes slide-open {
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-close {
+  100% {
+    transform: translateX(-66%);
+  }
+}

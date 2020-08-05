@@ -1,6 +1,7 @@
 import React from "react";
 import Zeppelin from "../assets/zeppeliner.svg";
 import { ReactComponent as Dots } from "../assets/dots.svg";
+
 import "../css/main.css";
 import "../css/home.css";
 
@@ -10,9 +11,8 @@ const Home = (props) => {
       <img
         id="zeppelin"
         src={Zeppelin}
-        style={{ height: 350, width: 350, fill: "white" }}
-        alt="Zeppelin"
-      ></img>
+        /* style={{ height: 350, width: 350, fill: "white" }} */
+        alt="Zeppelin"></img>
 
       <h1 id="title">Digital transformation</h1>
       <h2 id="subtitle">Rådgivning. Implementering. Resultater</h2>
