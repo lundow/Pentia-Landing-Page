@@ -31,18 +31,15 @@
 }
 
 .menu-item {
-
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
 }
 
 
-a {
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition:.5s;
-}
-a:hover {
+.menu-item:hover {
     color: #e95c55;
     border-bottom-width: 5px;
     border-color: white;

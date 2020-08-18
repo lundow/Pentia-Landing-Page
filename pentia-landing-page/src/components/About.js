@@ -6,7 +6,7 @@ import "../css/About.css";
 
 const About = (props) => {
   return (
-    <div className="about">
+    <div className="about" id="about-page">
       <h3 className="" id="about-title">
         Vi kan hjæelpe dig med<br></br> digital transformation på to fronter
       </h3>
@@ -21,11 +21,9 @@ const About = (props) => {
       </p>
 
       <Illustration2 className="logo" id="illustration-2"></Illustration2>
-      <h4 id="about-subtitle-right">
-       Eksekvering af digital transformation
-      </h4>
+      <h4 id="about-subtitle-right">Eksekvering af digital transformation</h4>
       <p id="about-description-right">
-        I ved, hvad I vil, men I har brug for hjælp til at rulle strategien ud i 
+        I ved, hvad I vil, men I har brug for hjælp til at rulle strategien ud i
         forhold til organisationen og det digitale fundament bl.a. på Sitecore.
         Det handler om mennesker og resultater.
       </p>
@@ -33,10 +31,4 @@ const About = (props) => {
   );
 };
 
-let styles = {
-  container: {
-    backgroundColor: "#FFFFFF",
-    height: "100vh",
-  },
-};
 export default About;

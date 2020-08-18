@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 import useWindowDimensions from "./utilities/useWindowDimensions";
 
 function App() {
-  const { height, width } = useWindowDimensions();
+  const {width } = useWindowDimensions();
   const [isDesktopDisplay, setIsDesktopDisplay] = useState(null);
 
   useEffect(() => {

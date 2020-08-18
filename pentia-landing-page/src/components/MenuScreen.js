@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { ReactComponent as Logo } from "../assets/logo.svg";
+import React from "react";
 import { ReactComponent as CloseButton } from "../assets/close.svg";
 import "../css/MenuScreen.css";
+import { Link } from "react-scroll";
 
 const MenuScreen = ({ openHandler, sidebarOpen, height, children }, props) => {
   const getClass = () => {
@@ -16,7 +16,7 @@ const MenuScreen = ({ openHandler, sidebarOpen, height, children }, props) => {
   };
 
   return (
-    <div className={getClass()}>
+    <div className={getClass()} id="home-page">
       <CloseButton
         id="close-button"
         onClick={openHandler}
@@ -25,12 +25,29 @@ const MenuScreen = ({ openHandler, sidebarOpen, height, children }, props) => {
       ></CloseButton>
 
       <div className="nav-menu">
-          <a>
-        <h1 className="menu-item" id="home-item">
-          HOME
-        </h1></a>
-        <a><h1 className="menu-item">ABOUT</h1></a>
-        <a><h1 className="menu-item">CONTACT</h1></a>
+        <Link onClick={openHandler} to="home-page" smooth={true} duration={800}>
+          <h1 className="menu-item" id="home-item">
+            HOME
+          </h1>
+        </Link>
+
+        <Link
+          onClick={openHandler}
+          to="about-page"
+          smooth={true}
+          duration={800}
+        >
+          <h1 className="menu-item">ABOUT</h1>
+        </Link>
+
+        <Link
+          onClick={openHandler}
+          to="contact-page"
+          smooth={true}
+          duration={800}
+        >
+          <h1 className="menu-item">CONTACT</h1>
+        </Link>
       </div>
     </div>
   );

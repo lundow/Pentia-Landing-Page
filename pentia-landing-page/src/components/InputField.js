@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import "../css/main.css";
 
-const InputField = ({ defaultValue }, props) => {
-  const [isFocused, setIsFocused] = useState(false);
-  const [labelText, setLabelText] = useState(defaultValue);
-
-
-
-  const handleBlur = (e) => {
-    console.log(e);
-  };
+const InputField = ({ defaultValue, type, ref, name }, props) => {
+  
   return (
-
     <input
       style={{
-        width:"100%",
+        width: "100%",
         borderWidth: "0px",
         backgroundColor: "transparent",
         borderBottomWidth: "1.5px",
@@ -22,16 +14,15 @@ const InputField = ({ defaultValue }, props) => {
         padding: "10px 10px 10px 0px",
         color: "white",
         fontFamily: "Montserrat",
-        fontSize:"1rem",
+        fontSize: "1rem",
         outline: "none",
-
       }}
-      name="example"
+      name={name}
       onFocus={(e) => (e.target.placeholder = "")}
       onBlur={(e) => (e.target.placeholder = defaultValue)}
       placeholder={defaultValue}
-      
-      ref={props.register}
+      type={type}
+      ref={ref}
     />
   );
 };

@@ -1,6 +1,9 @@
+.container{
+  background-color: #e95c55;
+  height: 100vh;
+}
 .contact {
   display: grid;
-  background-color: #e95c55;
   height: 100vh;
   grid-template-columns: 1fr 5fr 4fr 1fr 1fr 4fr 5fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 4fr 2fr 1fr;
@@ -10,10 +13,12 @@ h2 {
   font-size: 1.2rem;
 }
 
-#contact-title {
+h3 {
   font-weight: 700;
   font-size: 2rem;
   color: white;
+}
+#contact-title {
   grid-column: 2/8;
   grid-row: 2;
   align-self: flex-start;
@@ -29,6 +34,13 @@ h2 {
   grid-row: 3;
 }
 
+#registered-client {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  grid-row: 4/5;
+  grid-column: 3/7;
+}
 #prize-icon {
   grid-row: 5;
   grid-column: 4/6;
@@ -42,6 +54,29 @@ h2 {
   grid-column: 2/8;
 }
 
+.fade-in-animation {
+  opacity: 0;
+  animation: fade-in-confirmation 0.7s forwards;
+}
+
+#confirmation-title {
+  grid-row: 3;
+  grid-column: 3/7;
+}
+
+#confirmation-text {
+  grid-row: 4;
+  grid-column: 3/7;
+}
+
+#confirmation-signature {
+  grid-row: 4;
+  grid-column: 3/7;
+  align-self: center;
+  justify-self: center;
+  padding-top: 10%;
+}
+
 @media only screen and (max-width: 1000px) {
   .contact {
     grid-template-columns: 1fr 2fr 4fr 1fr 1fr 4fr 2fr 1fr;
@@ -49,12 +84,15 @@ h2 {
 }
 
 @media only screen and (max-width: 800px) {
-  #contact-title {
+  h3 {
     font-size: 1.6rem;
   }
 
   h2 {
     font-size: 1.2rem;
+  }
+  #confirmation-text {
+    grid-column: 2/8;
   }
 }
 
@@ -62,13 +100,21 @@ h2 {
   .contact {
     grid-template-columns: 0.5fr 1fr 5fr 1fr 1fr 5fr 1fr 0.5fr;
   }
-  #contact-title {
+  #confirmation-text {
+    grid-column: 2/8;
+  }
+  h3 {
     font-size: 1.5rem;
   }
-  #contact-subtitle {
 
-  }
   h2 {
     font-size: 1rem;
+  }
+
+}
+
+@keyframes fade-in-confirmation {
+  100% {
+    opacity: 1;
   }
 }

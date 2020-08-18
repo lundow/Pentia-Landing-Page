@@ -1,36 +1,69 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import InputField from "./InputField";
 import "../css/ContactForm.css";
 
-const ContactForm = (props) => {
-  const { register, handleSubmit, watch, errors } = useForm();
-  const onSubmit = (data) => console.log(data);
+const ContactForm = ({ onSuccess }, props) => {
+  const { register, handleSubmit, errors } = useForm();
 
- /*  console.log(watch("example")); // watch input value by passing the name of it */
+  const onSubmit = (data) => {
+    console.log(data);
+    onSuccess();
+  };
+
   return (
-   
-      <form id="form" onSubmit={handleSubmit(onSubmit)}>
-        <div id="name-field">
-          <InputField defaultValue="Navn" name="name" ref={register}></InputField> 
-        </div>
-        <div id="phone-field">
-          <InputField defaultValue="Mobil" name="phone" ref={register}></InputField> 
-        </div>
-        <div id="email-field">
-          <InputField defaultValue="e-mail" name="email" ref={register}></InputField> 
-        </div>
+    <form id="form" onSubmit={handleSubmit(onSubmit)}>
+      <input
+        className="input-field"
+        id="name-field"
+        style={errors.name && { borderColor: "#2a2a2c" }}
+        type="text"
+        placeholder={"Navn"}
+        name="name"
+        ref={register({ required: true })}
+      />
 
-        <div id="zipcode-field">
-          <InputField defaultValue="Postnr." name="zipcode" ref={register}></InputField> 
-        </div>
+      <input
+        id="phone-field"
+        className="input-field"
+        style={errors.phone && { borderColor: "#2a2a2c" }}
+        type="text"
+        placeholder="Mobil"
+        name="phone"
+        ref={register({ required: true, pattern: /^[0-9\s +]*$/ })}
+      ></input>
 
-        <div id="city-field">
-          <InputField defaultValue="By" name="city" ref={register}></InputField> 
-        </div>
+      <input
+        id="email-field"
+        className="input-field"
+        style={errors.email && { borderColor: "#2a2a2c" }}
+        type="text"
+        placeholder={"e-mail"}
+        name="email"
+        ref={register({ required: true, pattern:/^\S+@\S+\.\S+$/})}
+      ></input>
 
-        <input value="Ring mig op"id="submit-button" type="submit"></input>
-      </form>
+      <input
+        id="zipcode-field"
+        className="input-field"
+        style={errors.zipcode && { borderColor: "#2a2a2c" }}
+        type="text"
+        placeholder="Postnr."
+        name="zipcode"
+        ref={register({ required: true })}
+      ></input>
+
+      <input
+        id="city-field"
+        className="input-field"
+        style={errors.city && { borderColor: "#2a2a2c" }}
+        type="text"
+        placeholder="By"
+        name="city"
+        ref={register({ required: true })}
+      ></input>
+
+      <input type="submit" value="Ring mig op" id="submit-button"></input>
+    </form>
   );
 };
 

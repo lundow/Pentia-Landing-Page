@@ -11,7 +11,7 @@ const Navigation = ({ isDesktopDisplay }, props) => {
       resetAnimation();
       setLastDisplayValue(isDesktopDisplay);
     }
-  }, [isDesktopDisplay]);
+  }, [isDesktopDisplay,lastDisplayValue ]);
 
   const openHandler = () => {
     if (!sidebarOpen) {

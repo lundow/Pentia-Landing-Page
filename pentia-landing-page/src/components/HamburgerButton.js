@@ -20,8 +20,8 @@ let styles = {
     border: "none",
     backgroundColor: "transparent",
     cursor: "pointer",
-    webkitAppearance: "none",
-    mozAppearance: "none",
+    WebkitAppearance: "none",
+    MozAppearance: "none",
   },
 };
 export default HamburgerButton;
