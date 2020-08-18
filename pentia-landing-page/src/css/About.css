@@ -1,0 +1,157 @@
+.about {
+  background-color: #ffffff;
+  height: 100vh;
+  min-height: 700px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 4fr 1fr 1fr 4fr 2fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr 2fr 1fr;
+}
+
+#about-title {
+  font-weight: 900;
+  font-size: 2rem;
+  color: black;
+  grid-column: 3/7;
+  grid-row: 2;
+  align-self: flex-start;
+  justify-self: center;
+  margin: 0 2rem 0 2rem;
+}
+
+.about h4 {
+  color: black;
+  font-weight: 900;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+
+#about-subtitle {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+#about-subtitle-right {
+  grid-column: 6;
+  grid-row: 4;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: black;
+  align-self: flex-start;
+  justify-self: center;
+}
+
+#about-description {
+  grid-column: 3/4;
+  grid-row: 5;
+}
+
+#about-description-right {
+  grid-column: 6/7;
+  grid-row: 5;
+}
+
+.logo {
+  height: 180px;
+}
+#illustration-1 {
+  grid-column: 3;
+  grid-row: 3;
+  align-self: flex-start;
+  justify-self: center;
+}
+
+#illustration-2 {
+  grid-column: 6;
+  grid-row: 3;
+  align-self: flex-start;
+  justify-self: center;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  #about-title {
+    font-size: 1.5rem;
+    grid-column: 2/8;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .about {
+    grid-template-columns: 1% 1fr 5fr 1fr 1fr 5fr 1fr 1%;
+  }
+  #about-title {
+    font-size: 1.5rem;
+    grid-column: 2/8;
+  }
+  .about h4 {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+  .about p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .about {
+    grid-template-columns: 1%  2fr 4fr 4fr 2fr 1%;
+    grid-template-rows: 10% 1.5fr 2fr 1fr 1.5fr 2fr 1fr 1fr 10%;
+  }
+  .logo {
+    height: 120px;
+  }
+  #about-title {
+    font-size: 1.1rem;
+    grid-column: 2/8;
+  }
+
+  .about h4 {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+
+  .about p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
+  #about-subtitle {
+    grid-column: 3/5;
+    grid-row: 4;
+  }
+
+  #about-subtitle-right {
+    grid-column: 3/5;
+    grid-row: 7;
+  }
+
+  #about-description {
+    grid-column: 3/5;
+    grid-row: 5;
+    align-self:center;
+    justify-self: center;
+  }
+
+  #about-description-right {
+    grid-column: 3/5;
+    grid-row: 8;
+  }
+
+  #illustration-1 {
+    grid-column: 3/5;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+  }
+
+  #illustration-2 {
+    grid-column: 3/5;
+    grid-row: 6;
+    align-self: center;
+    justify-self: center;
+  }
+}

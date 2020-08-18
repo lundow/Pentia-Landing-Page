@@ -7,6 +7,13 @@
   grid-template-rows: 1fr 4fr 2fr 2fr 1fr;
 }
 
+#header-text {
+  grid-row: 1;
+  grid-column: 2/4;
+  align-self: flex-end;
+  justify-self: flex-start;
+}
+
 #zeppelin {
   grid-row: 1/4;
   grid-column: 3/7;

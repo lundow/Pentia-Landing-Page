@@ -1,0 +1,74 @@
+.contact {
+  display: grid;
+  background-color: #e95c55;
+  height: 100vh;
+  grid-template-columns: 1fr 5fr 4fr 1fr 1fr 4fr 5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 4fr 2fr 1fr;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+#contact-title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+  grid-column: 2/8;
+  grid-row: 2;
+  align-self: flex-start;
+  justify-self: center;
+  /* margin: 0 2rem 0 2rem; */
+}
+
+#contact-subtitle {
+  display: flex;
+  align-self: flex-start;
+  justify-self: center;
+  grid-column: 2/8;
+  grid-row: 3;
+}
+
+#prize-icon {
+  grid-row: 5;
+  grid-column: 4/6;
+  align-self: center;
+  justify-self: center;
+  max-height: 130px;
+}
+
+#bottom-title {
+  grid-row: 6;
+  grid-column: 2/8;
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact {
+    grid-template-columns: 1fr 2fr 4fr 1fr 1fr 4fr 2fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #contact-title {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact {
+    grid-template-columns: 0.5fr 1fr 5fr 1fr 1fr 5fr 1fr 0.5fr;
+  }
+  #contact-title {
+    font-size: 1.5rem;
+  }
+  #contact-subtitle {
+
+  }
+  h2 {
+    font-size: 1rem;
+  }
+}

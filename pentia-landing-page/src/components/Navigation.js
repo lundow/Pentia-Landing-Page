@@ -1,9 +1,17 @@
-import React, { useState } from "react";
-import { ReactComponent as Logo } from "../assets/logo.svg";
-import { ReactComponent as Hamburger } from "../assets/hamburger-menu.svg";
-import "../css/Navigation.css";
-const Navigation = (width, height, children) => {
+import React, { useState, useEffect } from "react";
+import Sidebar from "./Sidebar.js";
+import Topbar from "./Topbar.js";
+import "../css/main.css";
+const Navigation = ({ isDesktopDisplay }, props) => {
   const [sidebarOpen, setSideBarOpen] = useState(null);
+  const [lastDisplayValue, setLastDisplayValue] = useState(null);
+
+  useEffect(() => {
+    if (isDesktopDisplay !== lastDisplayValue) {
+      resetAnimation();
+      setLastDisplayValue(isDesktopDisplay);
+    }
+  }, [isDesktopDisplay]);
 
   const openHandler = () => {
     if (!sidebarOpen) {
@@ -13,42 +21,24 @@ const Navigation = (width, height, children) => {
     }
   };
 
-  const getClass = () => {
-    let navigationClass = ["navigation"];
-
-    if (sidebarOpen) {
-      navigationClass.push("sidebar-open");
-    } else if (sidebarOpen === false) {
-      navigationClass.push("sidebar-close");
-    }
-    return navigationClass.join(" ");
+  const resetAnimation = () => {
+    setSideBarOpen(null);
   };
-  return (
-    <div className={getClass()}>
-      <div className="toggle-field">
-        <Logo style={styles.logo}></Logo>
-        <div style={styles.hamburger}>
-          <button className="hamburger-button" onClick={() => openHandler()}>
-            <Hamburger height="30px" width="30px"></Hamburger>
-          </button>
-        </div>
-      </div>
-    </div>
-  );
+
+  const getContent = () => {
+    return isDesktopDisplay ? (
+      <Sidebar
+        sidebarOpen={sidebarOpen}
+        openHandler={() => openHandler()}
+      ></Sidebar>
+    ) : (
+      <Topbar
+        sidebarOpen={sidebarOpen}
+        openHandler={() => openHandler()}
+      ></Topbar>
+    );
+  };
+  return <div>{getContent()}</div>;
 };
 
-let styles = {
-  logo: {
-    fill: "white",
-    height: "30px",
-    margin: "15px",
-  },
-  hamburger: {
-    display: "flex",
-    flexDirection: "column",
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-};
 export default Navigation;

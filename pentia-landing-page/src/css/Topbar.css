@@ -1,0 +1,30 @@
+.topbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: none;
+  height: 60px;
+  width: 100vw;
+  position: absolute;
+  outline: none;
+  z-index: 1;
+}
+
+.topbar-close {
+  height: 100%;
+  animation: fade-out 0.7s forwards;
+  
+}
+
+.topbar-open {
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  opacity: 0;
+  animation: fade-in 0.7s forwards;
+}
+
+.toggle-field-top {
+  display: flex;
+  flex-direction: row;
+  grid-column: 3;
+}

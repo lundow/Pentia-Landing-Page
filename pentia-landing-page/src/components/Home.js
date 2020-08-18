@@ -8,6 +8,8 @@ import "../css/home.css";
 const Home = (props) => {
   return (
     <div className="home" style={styles.container}>
+
+      <h4 id="header-text">Lorem Ipsum</h4>
       <img
         id="zeppelin"
         src={Zeppelin}

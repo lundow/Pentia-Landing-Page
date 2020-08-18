@@ -1,0 +1,65 @@
+.menu-container {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #1b1b1d;
+  display: none;
+
+  align-items:center;
+  justify-content: center;
+}
+
+.menu-close {
+    display: flex;
+  opacity: 1;
+  animation: fade-out 0.5s forwards;
+}
+
+.menu-open {
+  opacity: 0;
+  animation: fade-in 0.5s forwards;
+  display: flex;
+}
+
+#close-button {
+  top: 22px;
+  right: 22px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.menu-item {
+
+}
+
+
+a {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+a:hover {
+    color: #e95c55;
+    border-bottom-width: 5px;
+    border-color: white;
+    cursor:pointer;
+}
+
+
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

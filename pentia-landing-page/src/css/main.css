@@ -4,7 +4,8 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  
+
+
   body {
     color: white;
     font-family: "Montserrat", sans-serif;
@@ -32,8 +33,14 @@
     font-size: 1.2rem;
   }
   
-  li {
+  ul {
 
+  }
+  li {
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    padding:0px;
   }
   
   a {
@@ -41,6 +48,19 @@
     text-decoration: none;
   }
   
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #F2A29E;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #F2A29E;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #F2A29E;
+  }
 
 @media only screen and (max-width:800px){
 
