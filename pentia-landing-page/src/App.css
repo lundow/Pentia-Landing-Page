@@ -1,23 +1,26 @@
 .App {
   text-align: center;
 }
-/* 
 
-::-webkit-scrollbar {
-  width: 10px;
+
+html {
+  --scrollbarBG: #D8D8D8;
+  --thumbBG: #E95C55;
 }
-
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #D8D8D8;
+body::-webkit-scrollbar {
+  width: 11px;
 }
-
-
-::-webkit-scrollbar-thumb {
-  background: #E85C55;
-  height: 10px;
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  overscroll-behavior-y: none;
 }
- */
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

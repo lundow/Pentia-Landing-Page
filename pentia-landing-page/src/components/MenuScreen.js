@@ -27,7 +27,7 @@ const MenuScreen = ({ openHandler, sidebarOpen, height, children }, props) => {
       <div className="nav-menu">
         <Link onClick={openHandler} to="home-page" smooth={true} duration={800}>
           <h1 className="menu-item" id="home-item">
-            HOME
+            START
           </h1>
         </Link>
 
@@ -37,7 +37,7 @@ const MenuScreen = ({ openHandler, sidebarOpen, height, children }, props) => {
           smooth={true}
           duration={800}
         >
-          <h1 className="menu-item">ABOUT</h1>
+          <h1 className="menu-item">OM PENTIA</h1>
         </Link>
 
         <Link
@@ -46,7 +46,7 @@ const MenuScreen = ({ openHandler, sidebarOpen, height, children }, props) => {
           smooth={true}
           duration={800}
         >
-          <h1 className="menu-item">CONTACT</h1>
+          <h1 className="menu-item">KONTAKT</h1>
         </Link>
       </div>
     </div>
