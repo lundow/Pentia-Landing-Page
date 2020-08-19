@@ -40,9 +40,6 @@ let styles = {
   mainContainer: {
     flex: 1,
     paddingLeft: "60px",
-  },
-  mainContainerSmall: {
-
   }
 };
 export default App;

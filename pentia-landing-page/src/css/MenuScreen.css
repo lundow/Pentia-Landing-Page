@@ -1,3 +1,4 @@
+
 .menu-container {
   height: 100vh;
   width: 100%;
@@ -6,7 +7,6 @@
   position: absolute;
   background-color: #1b1b1d;
   display: none;
-
   align-items:center;
   justify-content: center;
 }
@@ -21,6 +21,7 @@
   opacity: 0;
   animation: fade-in 0.5s forwards;
   display: flex;
+  position: fixed;
 }
 
 #close-button {

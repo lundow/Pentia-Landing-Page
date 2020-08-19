@@ -9,8 +9,10 @@ const MenuScreen = ({ openHandler, sidebarOpen, height, children }, props) => {
 
     if (sidebarOpen) {
       navigationClass.push("menu-open");
+      document.body.style.overflow = 'hidden';
     } else if (sidebarOpen === false) {
       navigationClass.push("menu-close");
+      document.body.style.overflow = 'unset';
     }
     return navigationClass.join(" ");
   };

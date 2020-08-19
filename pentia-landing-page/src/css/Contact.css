@@ -1,10 +1,12 @@
 .container{
   background-color: #e95c55;
   height: 100vh;
+  min-height: 700px;
 }
 .contact {
   display: grid;
   height: 100vh;
+  min-height: 700px;
   grid-template-columns: 1fr 5fr 4fr 1fr 1fr 4fr 5fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 4fr 2fr 1fr;
 }
@@ -30,7 +32,7 @@ h3 {
   display: flex;
   align-self: flex-start;
   justify-self: center;
-  grid-column: 2/8;
+  grid-column: 3/7;
   grid-row: 3;
 }
 
