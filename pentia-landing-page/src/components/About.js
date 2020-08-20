@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactComponent as Illustration1 } from "../assets/illustration1.svg";
 import { ReactComponent as Illustration2 } from "../assets/illustration2.svg";
-import "../css/main.css";
+import "../css/Main.css";
 import "../css/About.css";
 
 const About = (props) => {

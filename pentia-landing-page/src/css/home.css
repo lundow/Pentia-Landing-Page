@@ -42,7 +42,7 @@
   margin: 0 2rem 0 2rem;
 }
 
-#transitionBox {
+#transition-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,12 +50,11 @@
   justify-content: space-around;
   grid-row: 5;
   grid-column: 3/7;
-  /* align-self: flex-start; */
   justify-self: center;
   margin: 0 2rem 0 2rem;
 }
 
-#transitionBox:hover {
+#transition-box:hover {
   cursor: pointer;
 }
 

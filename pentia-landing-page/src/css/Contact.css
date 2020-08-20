@@ -8,7 +8,7 @@
   height: 100vh;
   min-height: 700px;
   grid-template-columns: 1fr 5fr 4fr 1fr 1fr 4fr 5fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 4fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 4fr 1fr 1fr;
 }
 
 h2 {
@@ -25,7 +25,6 @@ h3 {
   grid-row: 2;
   align-self: flex-start;
   justify-self: center;
-  /* margin: 0 2rem 0 2rem; */
 }
 
 #contact-subtitle {
@@ -48,7 +47,7 @@ h3 {
   grid-column: 4/6;
   align-self: center;
   justify-self: center;
-  max-height: 130px;
+  height: 100px;
 }
 
 #bottom-title {

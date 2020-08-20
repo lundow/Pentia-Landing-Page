@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "./Sidebar.js";
 import Topbar from "./Topbar.js";
-import "../css/main.css";
+import "../css/Main.css";
 const Navigation = ({ isDesktopDisplay }, props) => {
   const [sidebarOpen, setSideBarOpen] = useState(null);
   const [lastDisplayValue, setLastDisplayValue] = useState(null);

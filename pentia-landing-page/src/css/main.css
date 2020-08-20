@@ -8,25 +8,17 @@
 
 body {
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif; 
 }
 
 h1 {
-  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 3.2rem;
 }
 
 h2 {
-  font-family: "Montserrat", sans-serif;
+
   font-weight: lighter;
-}
-
-h3 {
-}
-
-h4 {
-  font-family: "Montserrat", sans-serif;
 }
 
 p {
@@ -47,8 +39,4 @@ p {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #f2a29e;
-}
-
-
-@media only screen and (max-width: 800px) {
 }

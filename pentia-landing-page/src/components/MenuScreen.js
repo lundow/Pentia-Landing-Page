@@ -3,7 +3,7 @@ import { ReactComponent as CloseButton } from "../assets/close.svg";
 import "../css/MenuScreen.css";
 import { Link } from "react-scroll";
 
-const MenuScreen = ({ openHandler, sidebarOpen, height, children }, props) => {
+const MenuScreen = ({ openHandler, sidebarOpen }, props) => {
   const getClass = () => {
     let navigationClass = ["menu-container"];
 

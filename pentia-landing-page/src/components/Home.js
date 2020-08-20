@@ -2,12 +2,12 @@ import React from "react";
 import Zeppelin from "../assets/zeppeliner.svg";
 import { ReactComponent as Dots } from "../assets/dots.svg";
 import { Link } from "react-scroll";
-import "../css/main.css";
-import "../css/home.css";
+import "../css/Main.css";
+import "../css/Home.css";
 
 const Home = (props) => {
   return (
-    <div className="home" id="home-page" style={styles.container}>
+    <div className="home" id="home-page" >
       <h4 id="header-text">Lorem Ipsum</h4>
       <img
         id="zeppelin"
@@ -27,7 +27,7 @@ const Home = (props) => {
         strategisk rådgivning til implementering
       </p>
 
-      <Link to="about-page" smooth="true" duration={800} id="transitionBox">
+      <Link to="about-page" smooth="true" duration={800} id="transition-box">
         <h5>Start din rejse her</h5>
         <Dots height="20"></Dots>
       </Link>
@@ -35,5 +35,5 @@ const Home = (props) => {
   );
 };
 
-let styles = {};
+
 export default Home;

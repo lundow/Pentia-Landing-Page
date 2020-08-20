@@ -7,8 +7,9 @@ import { Link } from "react-scroll";
 import HamburgerButton from "./HamburgerButton.js";
 
 import "../css/Sidebar.css";
-import "../css/main.css";
-const Sidebar = ({ openHandler, sidebarOpen, height, children }, props) => {
+import "../css/Main.css";
+const Sidebar = ({ openHandler, sidebarOpen}, props) => {
+  
   const getClass = () => {
     let navigationClass = ["sidebar"];
     if (sidebarOpen) {
